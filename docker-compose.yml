@@ -1,0 +1,9 @@
+# ./docker-compose.yml
+
+version: '3'
+
+services:
+  default:
+    build:
+      context: .
+    image: ftanyol/php7.2.2-apache-ssmtp:latest

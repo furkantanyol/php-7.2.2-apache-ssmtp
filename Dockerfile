@@ -1,4 +1,4 @@
-FROM web
+FROM php:7.2.2-apache
 
 # Install sSMTP for mail support
 RUN apt-get update \

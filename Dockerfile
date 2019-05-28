@@ -13,7 +13,9 @@ RUN pear upgrade --force --alldeps http://pear.php.net/get/PEAR-1.10.1 \
     && pear upgrade \
     && pear upgrade-all \
     && pear install Auth_SASL \
-    && pear install pear/Net_SMTP
+    && pear install pear/Net_SMTP \
+    && pear install Mail Mail_Mime
+
 
 
 

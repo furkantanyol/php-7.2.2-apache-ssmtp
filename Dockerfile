@@ -7,7 +7,13 @@ RUN apt-get update \
     && apt-get clean \
     && rm -r /var/lib/apt/lists/*
 
-RUN pear install Mail
+RUN pear upgrade --force --alldeps http://pear.php.net/get/PEAR-1.10.1 \ 
+    && pear clear-cache \
+    && pear update-channels \
+    && pear upgrade \
+    && pear upgrade-all \
+    && pear install Auth_SASL \
+    && pear install pear/Net_SMTP
 
 
 
